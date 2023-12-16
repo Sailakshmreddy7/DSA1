@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Arrays {
-    public static void ReverseofArray() {
+    public static void reverseOfArray_1() {
         int a[] = { 1, 2, 3, 4, 5, 6 };
         int start = 0;
         int end = a.length - 1;
@@ -22,7 +22,7 @@ public class Arrays {
         System.out.println();
     }
 
-    public static void reverseOfArray(int a[], int size) {
+    public static void reverseOfArray_2(int a[], int size) {
         int low = 0;
         int high = size - 1;
         while (low < high) {
@@ -39,7 +39,7 @@ public class Arrays {
 
     }
 
-    public static void righttoleft(int a[], int k) {
+    public static void rightRotation(int a[], int k) {
         int n = a.length;
         reverse(a, 0, n - k - 1);
         reverse(a, n - k, n - 1);
@@ -51,7 +51,7 @@ public class Arrays {
         System.out.println();
     }
 
-    public static void lefttoright(int a[], int k) {
+    public static void leftRotation(int a[], int k) {
         int n = a.length;
         reverse(a, 0, k - 1);
         reverse(a, k, n - 1);
@@ -74,7 +74,7 @@ public class Arrays {
 
     }
 
-    public static void secminandmax(int a[], int size) {
+    public static void secMinAndMaxNumOfArray(int a[], int size) {
         int min = Integer.MAX_VALUE;
         int secondMin = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
@@ -100,7 +100,7 @@ public class Arrays {
         System.out.println("Second Max element: " + secondMax);
     }
 
-    public static void noofarraysgivingnegsum(int a[], int n) {
+    public static void noOfArraysGivNegSum(int a[], int n) {
         int count = 0;
         for (int i = 0; i < n; i++) {
             int sum = 0;
@@ -114,7 +114,7 @@ public class Arrays {
         System.out.println(count);
     }
 
-    public static void noofarraysgivpossum(int a[], int n) {
+    public static void noOfArraysGivPosSum(int a[], int n) {
         int count = 0;
         for (int i = 0; i < n; i++) {
             int sum = 0;
@@ -128,7 +128,7 @@ public class Arrays {
         System.out.println(count);
     }
 
-    public static void minandmax(int a[], int size) {
+    public static void minAndMaxNumOfArray(int a[], int size) {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         for (int i = 0; i <= size; i++) {
@@ -139,7 +139,7 @@ public class Arrays {
         System.out.println("Max element: " + max);
     }
 
-    public static void missinnuminarray(int[] a) {
+    public static void missingNumber2(int[] a) {
         int n = a.length + 1;
         int xor = 0;
         for (int i = 1; i <= n; i++) {
@@ -152,7 +152,7 @@ public class Arrays {
         System.out.print(xor);
     }
 
-    public static void missingnumber(int[] a) {
+    public static void missingNumber1(int[] a) {
         int n = a.length;
         int tsum = ((n + 1) * (n + 2)) / 2;
         int asum = 0;
@@ -234,7 +234,7 @@ public class Arrays {
         }
     }
 
-    public static int majorityElement(int[] nums) {
+    public static int majorityElementNBy2(int[] nums) {
         int votes = 1;
         int majorityElement = nums[0];
         for (int i = 1; i < nums.length; i++) {
@@ -259,7 +259,7 @@ public class Arrays {
         return 0;
     }
 
-    public static void majelement(int[] nums) {
+    public static void majorityElementNBy3(int[] nums) {
         int ele1 = Integer.MIN_VALUE, ele2 = Integer.MAX_VALUE, cnt1 = 0, cnt2 = 0;
         int n = nums.length;
         for (int i = 0; i < n; i++) {
@@ -300,7 +300,7 @@ public class Arrays {
         }
     }
 
-    public static void hashmap(int[] a, int n) {
+    public static void majorityElementNby2_1(int[] a, int n) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
             map.put(a[i], map.getOrDefault(a[i], 0) + 1);
@@ -312,7 +312,7 @@ public class Arrays {
         }
     }
 
-    public static void hashmap2(int[] a, int n) {
+    public static void majorityElementNBy3_1(int[] a, int n) {
         HashMap<Integer, Integer> map = new HashMap<>();
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -327,7 +327,7 @@ public class Arrays {
         System.out.print(list);
     }
 
-    public static void frequency(int[] a) {
+    public static void singleNumber(int[] a) {
         int n = a.length;
         int xor = 0;
         for (int i = 0; i < n; i++) {
@@ -342,26 +342,26 @@ public class Arrays {
         int n1 = b.length - 1;
         int n = a.length - 1;
         int k = 2;
-        // ReverseofArray();
-        // reverseOfArray(a, n);
-        // righttoleft(a, k);
-        // lefttoright(a, k);
-        // minandmax(a, n);
-        // secminandmax(a, n);
-        // noofarraysgivingnegsum(a, n);
-        // noofarraysgivpossum(a, n);
-        // missinnuminarray(a);
-        // missingnumber(a);
-        // maxSubArray(a, n);
-        // maxSubArrayindex(a, n);
-        // sortArray(b, n1);
-        // printArray(b, n1);
-        // int majorityElement = majorityElement(a);
-        // System.out.print("Majority element is :" + majorityElement);
-        // majelement(a);
-        // hashmap(a, n);
-        // hashmap2(a, n);
-        frequency(a);
+        reverseOfArray_1();
+        reverseOfArray_2(a, n);
+        rightRotation(a, k);
+        leftRotation(a, k);
+        minAndMaxNumOfArray(a, n);
+        secMinAndMaxNumOfArray(a, n);
+        noOfArraysGivNegSum(a, n);
+        noOfArraysGivPosSum(a, n);
+        missingNumber1(a);
+        missingNumber2(a);
+        maxSubArray(a, n);
+        maxSubArrayindex(a, n);
+        sortArray(b, n1);
+        printArray(b, n1);
+        int majorityElement = majorityElementNBy2(a);
+        System.out.print("Majority element is :" + majorityElement);
+        majorityElementNBy3(a);
+        majorityElementNby2_1(a, n);
+        majorityElementNBy3_1(a, n);
+        singleNumber(a);
     }
 
 }
